@@ -30,4 +30,10 @@ class authorizationPage{
         this.getPasswordField().type(longPassword);
         this.getLoginButton().click();
     }
+    repeatableEmail(repeatableEmail, password){
+        cy.log("Check for login with repeatable email")
+        this.getLoginField().type(repeatableEmail);
+        this.getPasswordField().type(password);
+        this.getLoginButton().click();
+    }
 }export default new authorizationPage();

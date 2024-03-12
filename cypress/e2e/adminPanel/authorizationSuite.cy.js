@@ -11,6 +11,10 @@ describe('Test suite for authorization',() => {
       authorizationPage.visit();
       authorizationPage.upperBoundValueLogin(authorizationCredentials.longEmail, authorizationCredentials.longPassword);
     })
+    it.only('Login with repeatable email',()=>{
+      authorizationPage.visit();
+      authorizationPage.repeatableEmail(authorizationCredentials.repeatableEmail, authorizationCredentials.password);
+    })
   })
   describe('Positive scenarios',()=>{
     it('Success authorization',()=>{
